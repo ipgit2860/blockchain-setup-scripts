@@ -6,3 +6,10 @@ scripts that use during setting up a blockchain network
 2. addGenesisAccount: using a list of address and staking amount to add accounts to the genesis.json
 3. genGenesisTransaction: using a genesis list to create transaction messages
 
+
+The following folders have to be created 
+bin/
+wallets/
+transactions/
+nodehomedirectory/
+
