@@ -1,1 +1,5 @@
 *.txt
+bin/
+wallets/
+transactions/
+nodehomedirectory/
