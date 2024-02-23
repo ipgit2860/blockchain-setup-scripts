@@ -44,10 +44,9 @@ func main() {
 
 	keysMnemonic := []string{"keys", "mnemonic"}
 	keysMnemonic = append(keysMnemonic, chainHome...)
-	keysMnemonic = append(keysMnemonic, keyringBackend...)
 
 	keysAdd := []string{"keys", "add"}
-	keysDelete := []string{"keys", "delete"}
+	// keysDelete := []string{"keys", "delete"}
 	recoverFlag := "--recover"
 	outputJson := []string{"--output", "json"}
 
@@ -97,6 +96,7 @@ func main() {
 		recoverKey := append(keysAdd, accName, recoverFlag)
 		// recoverKey = append(recoverKey, chainHome...)
 		recoverKey = append(recoverKey, outputJson...)
+		recoverKey = append(recoverKey, keyringBackend...)
 		fmt.Println(recoverKey)
 
 		output, _ := execCmdInputOutput(recoverKey, mnemonic)
@@ -116,10 +116,10 @@ func main() {
 		}
 
 		// delete the key after
-		deleteKey := append(keysDelete, accName)
-		deleteKey = append(deleteKey, "--yes")
-		out, _ := execCmdOutputOnly(deleteKey)
-		fmt.Println(string(out))
+		// deleteKey := append(keysDelete, accName)
+		// deleteKey = append(deleteKey, "--yes")
+		// out, _ := execCmdOutputOnly(deleteKey)
+		// fmt.Println(string(out))
 	}
 }
 
