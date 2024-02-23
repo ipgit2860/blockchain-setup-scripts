@@ -94,7 +94,7 @@ func main() {
 
 		accName := "acc" + strconv.Itoa(i)
 		recoverKey := append(keysAdd, accName, recoverFlag)
-		// recoverKey = append(recoverKey, chainHome...)
+		recoverKey = append(recoverKey, chainHome...)
 		recoverKey = append(recoverKey, outputJson...)
 		recoverKey = append(recoverKey, keyringBackend...)
 		fmt.Println(recoverKey)
