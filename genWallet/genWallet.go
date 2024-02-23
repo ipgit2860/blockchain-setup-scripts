@@ -39,7 +39,13 @@ func main() {
 	numOfaccounts, _ := strconv.Atoi(args[0])
 	fmt.Println("Number of Accounts to create: ", args[0])
 
+	chainHome := []string{"--home", nodeHomeDirectory}
+	keyringBackend := []string{"--keyring-backend", "memory"}
+
 	keysMnemonic := []string{"keys", "mnemonic"}
+	keysMnemonic = append(keysMnemonic, chainHome...)
+	keysMnemonic = append(keysMnemonic, keyringBackend...)
+
 	keysAdd := []string{"keys", "add"}
 	keysDelete := []string{"keys", "delete"}
 	recoverFlag := "--recover"

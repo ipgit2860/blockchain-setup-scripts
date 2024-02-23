@@ -7,7 +7,7 @@ scripts that use during setting up a blockchain network
 3. genGenesisTransaction: using a genesis list to create transaction messages
 
 
-The following folders have to be created 
+Use ./makeFolders to create the following folders:  
 bin/
 wallets/
 transactions/
